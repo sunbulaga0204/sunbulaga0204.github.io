@@ -35,6 +35,12 @@ A high-performance ranking backend utilizing semantic embeddings and real-time s
 * **Streaming API Design:** Implements real-time SSE (Server-Sent Events) for non-blocking analysis and conversational candidate Q&A.
 * **Compliance Ready:** Automated PII stripping and sanitization of ingested documents.
 
+#### 3. Resurrection AI (Digital Heritage Persona Engine)
+A specialized RAG and LLM orchestration pipeline designed to digitally "resurrect" and interact with specific personas, bridging generative AI with historical and personal data sets.
+* **Continuous Feedback RAG Pipeline:** Ingests fragmented multi-source data (structured DBs, unstructured texts, real-time API feeds) and processes it through a continuous feedback loop to dynamically refine the persona's historical and behavioral accuracy.
+* **Hybrid Database Architecture:** Combines standard relational databases (PostgreSQL) for structured entity traits and interaction states, alongside NoSQL/Vector stores for high-speed, semantic retrieval of unstructured context.
+* **Dynamic Model Routing:** Orchestrates LLM deployment by routing queries between fine-tuned models (for highly specific persona tone/dialogue generation) and broader foundation models (for general knowledge reasoning), hosted on scalable cloud infrastructure. 
+
 ---
 
 ### ⚙️ My Approach to AI Engineering
