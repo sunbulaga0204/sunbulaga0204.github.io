@@ -1,0 +1,116 @@
+# Teacher Assistant Agent
+
+**AI-Powered Intelligent Essay Evaluation & Administrative Knowledge Management Platform**
+
+> Developed by **Anggi Azzuhri** | Licensed under GNU AGPLv3 | Copyright © 2026
+
+---
+
+## 📖 Table of Contents
+
+- [What is Teacher Assistant Agent?](#what-is-teacher-assistant-agent)
+- [Core Features](#core-features)
+- [Who Should Use This](#who-should-use-this)
+- [Why You Need It](#why-you-need-it)
+- [Security & Concerns Addressed](#security--concerns-addressed)
+- [Pricing & Licensing](#pricing--licensing)
+- [Getting Started](#getting-started)
+- [Copyright & Commercialization](#copyright--commercialization)
+
+---
+
+## 🎯 What is Teacher Assistant Agent?
+
+Teacher Assistant Agent is an intelligent, conversational AI platform designed to revolutionize how educators manage two critical responsibilities: **student assessment** and **administrative information retrieval**. 
+
+Rather than rigid command-based systems, it uses **natural language conversation** to understand your needs and dispatch specialized AI agents to handle grading, scheduling, knowledge retrieval, and more.
+
+The platform operates via **Telegram**, making it accessible anywhere, anytime—on your phone, tablet, or desktop.
+
+### Key Tagline
+> *Stop spending hours grading essays. Stop searching through 50-page handbooks for policy answers. Start teaching what matters.*
+
+---
+
+## ✨ Core Features
+
+### 1. Intelligent Essay Grading Engine
+
+**What it does:**
+- Evaluates student answers based on **meaning and concept mastery**, not keyword matching
+- Uses your **golden answer** as the semantic reference for all comparisons
+- Grades multiple students simultaneously (up to 10 files in one batch)
+- Identifies top performers and struggling students automatically
+- Generates specific, actionable feedback for each submission
+
+**Supported Formats:** PDF, DOCX  
+**Cost Model:** 1 credit per essay (bulk discounts available)
+
+**Use Case Example:**
+> Teacher submits a golden answer for a Chemistry essay on photosynthesis. Twenty student answers are uploaded. Within minutes, Teacher Assistant Agent provides:
+> - Individual grades with detailed reasoning
+> - Class average and performance distribution
+> - In-depth analysis for bottom 3 students
+> - Common misconceptions to address in the next lesson
+> - **Time saved:** 3.5+ hours of manual grading
+
+---
+
+### 2. Administrative Knowledge Base & RAG
+
+**What it does:**
+- Upload school handbooks, curriculum guides, discipline policies, medical protocols
+- Ask natural language questions: *"What's our absence policy?"* or *"How do we handle disciplinary appeals?"*
+- System automatically detects document type for better retrieval
+- Every answer includes specific references to your uploaded documents (no hallucinations)
+- Search in English or Bahasa Indonesia
+
+**Key Capability:** Retrieval Augmented Generation (RAG)
+- Multi-document context aggregation
+- Semantic chunking for precise retrieval
+- Document-grounded response generation
+
+**Use Case Example:**
+> Principal uploads the new student handbook. A teacher asks: *"Can parents appeal a suspension?"* The system retrieves relevant sections, provides exact procedures, cites document references, and includes timeline requirements—all in 10 seconds.
+
+---
+
+### 3. Conversational Intent Recognition
+
+No command syntax to memorize. Just speak naturally:
+
+| Natural Language Input | System Action | Result |
+|---|---|---|
+| *"Can you evaluate my students' essays?"* | Initiates grading workflow | Upload essays → Get grades & feedback |
+| *"Add this PDF to my knowledge base"* | Document upload preparation | Auto-classify & index documents |
+| *"What's the attendance policy?"* | Knowledge base search | Retrieve policy with direct citations |
+| *"Schedule a staff meeting tomorrow at 3 PM"* | Calendar management | Event created with reminder |
+| *"How many credits do I have left?"* | Account check | Balance displayed instantly |
+| *"Switch to Bahasa Indonesia"* | Language toggle | Interface language changed |
+
+---
+
+### 4. Additional Features
+
+- **📅 Calendar Management:** Schedule meetings, add events, export to .ics format
+- **🎫 Credit System:** Transparent usage tracking with affordable purchasing options
+- **🌐 Bilingual Interface:** Seamless switching between English and Bahasa Indonesia
+- **💾 Session Persistence:** Context maintained across conversations (reference previous results)
+- **📊 Analytics Dashboard:** Track grading patterns, time savings, and usage metrics
+
+---
+
+## 👥 Who Should Use This
+
+### Primary Users
+
+#### 1. **Individual Teachers** (Secondary & Higher Education)
+- Grading 50+ essays per semester? Reduces grading time by **70%**
+- Managing policies and handbooks? Get instant answers without searching PDFs
+- Need consistent, unbiased evaluation? AI ensures rubric consistency across all students
+
+#### 2. **School Administrators & Coordinators**
+- Teachers frequently ask policy questions? Build a centralized knowledge base
+- Inconsistent policy interpretation? Ensure standardization across school
+- Need audit trails for compliance? Maintain query logs
+
