@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=Fira+Code:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#ffe17a",
+            "surface-bright": "#3a393a",
+            "inverse-surface": "#e5e2e3",
+            "inverse-primary": "#006d40",
+            "secondary-fixed": "#a0f5bd",
+            "on-tertiary": "#3b2f00",
+            "on-primary": "#00391f",
+            "on-error": "#690005",
+            "surface-container-low": "#1c1b1c",
+            "outline-variant": "#3b4b3f",
+            "outline": "#849587",
+            "secondary": "#84d8a3",
+            "tertiary": "#fffaff",
+            "surface-variant": "#353436",
+            "error-container": "#93000a",
+            "on-tertiary-fixed": "#231b00",
+            "primary-fixed-dim": "#00e38a",
+            "on-secondary": "#00391f",
+            "on-secondary-fixed-variant": "#00522f",
+            "tertiary-fixed-dim": "#e4c44f",
+            "secondary-fixed-dim": "#84d8a3",
+            "surface-container-lowest": "#0e0e0f",
+            "surface-container-highest": "#353436",
+            "on-primary-fixed-variant": "#00522f",
+            "surface-tint": "#00e38a",
+            "inverse-on-surface": "#313031",
+            "on-secondary-container": "#8bdfa9",
+            "background": "#131314",
+            "surface-container-high": "#2a2a2b",
+            "on-secondary-fixed": "#002110",
+            "on-surface-variant": "#b9cbbc",
+            "surface-dim": "#131314",
+            "surface-container": "#201f20",
+            "on-tertiary-fixed-variant": "#554500",
+            "primary-fixed": "#56ffa7",
+            "error": "#ffb4ab",
+            "primary": "#f3fff3",
+            "on-error-container": "#ffdad6",
+            "surface": "#131314",
+            "primary-container": "#00ff9c",
+            "on-background": "#e5e2e3",
+            "on-surface": "#e5e2e3",
+            "secondary-container": "#00653a",
+            "on-primary-fixed": "#002110",
+            "tertiary-container": "#ffdd65",
+            "on-tertiary-container": "#766000",
+            "on-primary-container": "#007142"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Fira Code"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { background-color: #131314; color: #e5e2e3; font-family: 'Inter', sans-serif; }
+    .fira-code { font-family: 'Fira Code', monospace; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glow-hover:hover { box-shadow: 0 0 20px rgba(0, 255, 156, 0.2); }
+    .terminal-cursor::after { content: '_'; animation: blink 1s infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-[#131314] shadow-[0_10px_30px_rgba(0,255,156,0.05)]">
+<div class="font-['Fira_Code'] font-bold text-[#00FF9C] tracking-widest bg-[#00FF9C]/10 px-2 py-1">
+      TEACHER_ASSISTANT_v1.0
+    </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#00FF9C] border-b-2 border-[#00FF9C] pb-1 font-['Fira_Code'] uppercase text-xs cursor-pointer active:opacity-80" href="#">Features</a>
+<a class="text-[#b9cbbc] font-['Fira_Code'] uppercase text-xs hover:text-[#00FF9C] hover:bg-[#1c1b1c] transition-all cursor-pointer active:opacity-80" href="#">Security</a>
+<a class="text-[#b9cbbc] font-['Fira_Code'] uppercase text-xs hover:text-[#00FF9C] hover:bg-[#1c1b1c] transition-all cursor-pointer active:opacity-80" href="#">Pricing</a>
+<a class="text-[#b9cbbc] font-['Fira_Code'] uppercase text-xs hover:text-[#00FF9C] hover:bg-[#1c1b1c] transition-all cursor-pointer active:opacity-80" href="#">Docs</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-4 mr-4 text-on-surface-variant">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-container">terminal</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary-container">settings</span>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 font-['Fira_Code'] font-bold text-xs glow-hover">
+        DEPLOY_AGENT
+      </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 py-20 flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 space-y-6">
+<div class="inline-block bg-surface-container-low px-3 py-1 rounded text-primary-container fira-code text-xs">
+          SYSTEM_DEPLOYMENT :: STABLE
+        </div>
+<h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter leading-none text-on-surface">
+          TEACHER <span class="text-primary-container">ASSISTANT</span> AGENT
+        </h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+          AI-Powered Intelligent Essay Evaluation &amp; Administrative Knowledge Management Platform. Seamlessly bridge the gap between academic assessment and institutional intelligence.
+        </p>
+<div class="fira-code text-sm pt-4 border-l-2 border-primary-container pl-6 space-y-1">
+<p><span class="text-primary-container">AUTH:</span> Anggi Azzuhri</p>
+<p><span class="text-primary-container">LICENSE:</span> MIT_OS_V2</p>
+<p><span class="text-primary-container">BUILD:</span> 2024.10.12</p>
+</div>
+<div class="flex gap-4 pt-6">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-bold text-lg glow-hover">
+            Get Started
+          </button>
+<button class="bg-surface-container-highest border border-primary-container/20 text-on-surface px-8 py-4 rounded-lg font-bold text-lg hover:bg-surface-container-high transition-colors">
+            Documentation
+          </button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -inset-4 bg-primary-container/5 blur-3xl rounded-full"></div>
+<div class="relative bg-surface-container-low rounded-xl overflow-hidden shadow-2xl border border-outline-variant/10">
+<img alt="Digital Terminal Interface" class="opacity-60 grayscale hover:grayscale-0 transition-all duration-500" data-alt="Close-up of high-tech computer screen displaying green code lines and abstract data visualizations in a dark room environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0cE0oGIvom5nCE0NM0TgTMxrdwnOdWBSNMvISw336OZyRd4SIkX09ZxlW3uAcQP_5XqN2NdUSLzaFQeiYm3uXUx_-5IahjuUNMulG5kVfSlT3OsN8envmrMcLcFxywLfOImu9sMJoavUj9rz1O0nSt1Vg7CN0wNlh0nQ0CvX5EkapkN4DjpgilOBPftcU8y-QGsEaQZfT84T1K8q5eLFJ9KsCPyAQWVSY2KpQ1CxA8BXDDAE1hzKz6GXueSRcfAmmzC67auB_LxM"/>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest p-4 rounded border border-primary-container/20 fira-code text-[10px]">
+<div class="flex gap-2 items-center mb-2">
+<div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div>
+<span class="text-primary-container">AGENT_LIVE_FEED</span>
+</div>
+<div class="text-on-surface-variant">
+              &gt; Analyzing Essay #4291...<br/>
+              &gt; Score: 8.5/10 (High Logic Fidelity)<br/>
+              &gt; RAG Retrieval: Internal_Policy_v4.pdf
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Overview Section -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-bold tracking-tight text-on-surface">WHAT_IS_IT?</h2>
+<div class="h-1 w-20 bg-primary-container"></div>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+              Teacher Assistant Agent is a cutting-edge platform designed to alleviate the administrative and pedagogical burden on educators. By integrating advanced LLM capabilities with internal institutional knowledge, it functions as a 24/7 digital colleague capable of grading complex essays and answering policy questions with clinical precision.
+            </p>
+<div class="bg-surface-container-lowest p-6 rounded-lg border-l-4 border-primary-container">
+<div class="flex items-center gap-4 mb-3">
+<span class="material-symbols-outlined text-primary-container">send</span>
+<span class="fira-code font-bold text-on-surface">TELEGRAM_INTEGRATION</span>
+</div>
+<p class="text-sm text-on-surface-variant">Access the full power of the agent via a streamlined Telegram Bot interface. Direct-to-mobile reporting and grading notifications for maximum agility.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container-high rounded-xl p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary-container text-4xl">psychology</span>
+<div class="fira-code text-xs uppercase tracking-widest text-on-surface-variant">Cognitive_Processing</div>
+</div>
+<div class="aspect-square bg-primary-container rounded-xl p-8 flex flex-col justify-between group cursor-pointer hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-on-primary-container text-4xl">database</span>
+<div class="fira-code text-xs uppercase tracking-widest text-on-primary-container font-bold">RAG_Architecture</div>
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-xl p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary-container text-4xl">shield</span>
+<div class="fira-code text-xs uppercase tracking-widest text-on-surface-variant">Neural_Encryption</div>
+</div>
+<div class="aspect-square bg-surface-container-high rounded-xl p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary-container text-4xl">terminal</span>
+<div class="fira-code text-xs uppercase tracking-widest text-on-surface-variant">CLI_Access</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Features Section -->
+<section class="py-32 max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<span class="fira-code text-primary-container text-sm font-bold uppercase tracking-[0.3em]">System_Capabilities</span>
+<h2 class="text-5xl font-bold mt-4">CORE_FEATURES</h2>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="bg-surface-container-low p-8 rounded-lg hover:translate-y-[-8px] transition-all duration-300 group">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container group-hover:text-on-primary-container">edit_document</span>
+</div>
+<h3 class="fira-code font-bold text-on-surface mb-4">Essay Grading</h3>
+<ul class="text-xs text-on-surface-variant space-y-3 fira-code">
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Automated Logic Check</li>
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Tone Consistency</li>
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Structural Feedback</li>
+</ul>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-low p-8 rounded-lg hover:translate-y-[-8px] transition-all duration-300 group border-t-2 border-primary-container">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container group-hover:text-on-primary-container">folder_managed</span>
+</div>
+<h3 class="fira-code font-bold text-on-surface mb-4">Admin Knowledge Base</h3>
+<ul class="text-xs text-on-surface-variant space-y-3 fira-code">
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Advanced RAG Support</li>
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Policy Query Engine</li>
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Inst. History Search</li>
+</ul>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-low p-8 rounded-lg hover:translate-y-[-8px] transition-all duration-300 group">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container group-hover:text-on-primary-container">troubleshoot</span>
+</div>
+<h3 class="fira-code font-bold text-on-surface mb-4">Intent Recognition</h3>
+<ul class="text-xs text-on-surface-variant space-y-3 fira-code">
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Contextual Mapping</li>
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> User Goal Extraction</li>
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Precision Routing</li>
+</ul>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-low p-8 rounded-lg hover:translate-y-[-8px] transition-all duration-300 group">
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary-container group-hover:text-on-primary-container">extension</span>
+</div>
+<h3 class="fira-code font-bold text-on-surface mb-4">Additional Tooling</h3>
+<ul class="text-xs text-on-surface-variant space-y-3 fira-code">
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> API Integrations</li>
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Export Data/CSV</li>
+<li class="flex items-start gap-2"><span class="text-primary-container">[+]</span> Custom Rubrics</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Audience Section -->
+<section class="bg-surface-container-lowest py-24 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16">
+<div class="space-y-6">
+<h2 class="text-4xl font-bold">WHO_SHOULD_USE?</h2>
+<p class="text-on-surface-variant">The platform is engineered to serve the dual needs of high-pressure educational environments.</p>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center gap-6 group hover:bg-surface-container transition-colors">
+<div class="text-3xl font-black text-primary-container fira-code">01</div>
+<div>
+<h4 class="font-bold text-on-surface">Primary Users: Teachers</h4>
+<p class="text-sm text-on-surface-variant">Instructional staff focused on grading and curriculum delivery.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center gap-6 group hover:bg-surface-container transition-colors">
+<div class="text-3xl font-black text-primary-container fira-code">02</div>
+<div>
+<h4 class="font-bold text-on-surface">Secondary Users: Admin</h4>
+<p class="text-sm text-on-surface-variant">School managers handling policy, logistics, and compliance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Studies Section -->
+<section class="py-32 max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-bold mb-16 text-center">PROBLEM_SOLVED</h2>
+<div class="space-y-8">
+<!-- Case 1 -->
+<div class="bg-surface-container-low flex flex-col md:flex-row rounded-xl overflow-hidden">
+<div class="md:w-1/3 p-10 bg-surface-container-high flex flex-col justify-center">
+<span class="fira-code text-xs text-error mb-2">SCENARIO_A</span>
+<h3 class="text-2xl font-bold mb-4">Grading Burnout</h3>
+</div>
+<div class="flex-1 p-10 grid md:grid-cols-2 gap-10">
+<div>
+<span class="text-xs fira-code text-on-surface-variant block mb-2 uppercase">The Problem</span>
+<p class="text-sm text-on-surface-variant">Teachers spend 15+ hours/week grading essays, leading to fatigue and delayed feedback loops for students.</p>
+</div>
+<div>
+<span class="text-xs fira-code text-primary-container block mb-2 uppercase">The Solution</span>
+<p class="text-sm text-on-surface">Agent provides preliminary scores and specific constructive feedback in seconds, reducing grading time by 80%.</p>
+</div>
+</div>
+</div>
+<!-- Case 2 -->
+<div class="bg-surface-container-low flex flex-col md:flex-row rounded-xl overflow-hidden">
+<div class="md:w-1/3 p-10 bg-surface-container-high flex flex-col justify-center">
+<span class="fira-code text-xs text-error mb-2">SCENARIO_B</span>
+<h3 class="text-2xl font-bold mb-4">Policy Chaos</h3>
+</div>
+<div class="flex-1 p-10 grid md:grid-cols-2 gap-10">
+<div>
+<span class="text-xs fira-code text-on-surface-variant block mb-2 uppercase">The Problem</span>
+<p class="text-sm text-on-surface-variant">Staff struggle to find specific administrative procedures buried in legacy PDFs and static handbooks.</p>
+</div>
+<div>
+<span class="text-xs fira-code text-primary-container block mb-2 uppercase">The Solution</span>
+<p class="text-sm text-on-surface">Centralized RAG Knowledge Base allows natural language queries for instant, source-cited policy answers.</p>
+</div>
+</div>
+</div>
+<!-- Case 3 -->
+<div class="bg-surface-container-low flex flex-col md:flex-row rounded-xl overflow-hidden">
+<div class="md:w-1/3 p-10 bg-surface-container-high flex flex-col justify-center">
+<span class="fira-code text-xs text-error mb-2">SCENARIO_C</span>
+<h3 class="text-2xl font-bold mb-4">Language Barriers</h3>
+</div>
+<div class="flex-1 p-10 grid md:grid-cols-2 gap-10">
+<div>
+<span class="text-xs fira-code text-on-surface-variant block mb-2 uppercase">The Problem</span>
+<p class="text-sm text-on-surface-variant">Difficulty supporting non-native students with high-quality stylistic feedback in specialized subjects.</p>
+</div>
+<div>
+<span class="text-xs fira-code text-primary-container block mb-2 uppercase">The Solution</span>
+<p class="text-sm text-on-surface">Multilingual AI processing provides nuanced grammar and style suggestions adapted to the student's level.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Security & Trust Section -->
+<section class="bg-[#0e0e0f] py-32">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl font-bold mb-4">SECURITY_PROTOCOL</h2>
+<p class="text-on-surface-variant">Enterprise-grade security and ethical safeguards are baked into every layer of our neural architecture.</p>
+</div>
+<div class="fira-code text-primary-container border border-primary-container/30 px-6 py-2 rounded-full text-xs">
+            COMPLIANCE: SOC2_READY
+          </div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Concerns -->
+<div class="p-8 border border-outline-variant/10 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary-container">lock</span>
+<h4 class="font-bold uppercase tracking-tight">Privacy</h4>
+</div>
+<p class="text-sm text-on-surface-variant">Data is anonymized before processing. No student PII is stored long-term on our servers.</p>
+</div>
+<div class="p-8 border border-outline-variant/10 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary-container">balance</span>
+<h4 class="font-bold uppercase tracking-tight">Bias Neutrality</h4>
+</div>
+<p class="text-sm text-on-surface-variant">Aggressive de-biasing filters ensure fair evaluation regardless of student background or tone.</p>
+</div>
+<div class="p-8 border border-outline-variant/10 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary-container">task_alt</span>
+<h4 class="font-bold uppercase tracking-tight">Accuracy</h4>
+</div>
+<p class="text-sm text-on-surface-variant">Confidence-scored outputs. If the agent is uncertain, it flags the item for manual review.</p>
+</div>
+<div class="p-8 border border-outline-variant/10 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary-container">copyright</span>
+<h4 class="font-bold uppercase tracking-tight">IP Protection</h4>
+</div>
+<p class="text-sm text-on-surface-variant">All intellectual property uploaded remains the sole property of the user institution.</p>
+</div>
+<div class="p-8 border border-outline-variant/10 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary-container">door_open</span>
+<h4 class="font-bold uppercase tracking-tight">Zero Lock-in</h4>
+</div>
+<p class="text-sm text-on-surface-variant">Export your vector databases and training prompts at any time. Your knowledge, your platform.</p>
+</div>
+<div class="p-8 border border-outline-variant/10 rounded-lg bg-surface-container-lowest">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary-container">verified_user</span>
+<h4 class="font-bold uppercase tracking-tight">Security</h4>
+</div>
+<p class="text-sm text-on-surface-variant">End-to-end encryption for all API calls and data at rest using AES-256 standards.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing & Onboarding -->
+<section class="py-32 max-w-7xl mx-auto px-8">
+<div class="bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/10 flex flex-col lg:flex-row">
+<div class="lg:w-1/2 p-12 lg:p-20 space-y-12">
+<div>
+<h2 class="text-4xl font-bold mb-6">ONBOARDING_PIPELINE</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="fira-code text-primary-container font-bold text-xl">STEP_01</div>
+<div>
+<h5 class="font-bold text-on-surface">Knowledge Sync</h5>
+<p class="text-sm text-on-surface-variant">Upload your policy PDFs and essay rubrics into the secure vault.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="fira-code text-primary-container font-bold text-xl">STEP_02</div>
+<div>
+<h5 class="font-bold text-on-surface">Agent Configuration</h5>
+<p class="text-sm text-on-surface-variant">Define grading parameters and personality settings for the bot.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="fira-code text-primary-container font-bold text-xl">STEP_03</div>
+<div>
+<h5 class="font-bold text-on-surface">Channel Deployment</h5>
+<p class="text-sm text-on-surface-variant">Connect to Telegram or your existing LMS via API keys.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 bg-surface-container-high p-12 lg:p-20 flex flex-col justify-center">
+<div class="bg-surface-container-lowest p-8 rounded-xl border-t-4 border-primary-container shadow-2xl">
+<h3 class="fira-code font-bold text-primary-container mb-2">QUICK_START_PLAN</h3>
+<div class="text-5xl font-black mb-6">$49<span class="text-lg text-on-surface-variant font-normal">/mo/agent</span></div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary-container">check_circle</span> Unlimited Essay Analysis</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary-container">check_circle</span> 2GB Knowledge Storage</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary-container">check_circle</span> Telegram Integration</li>
+<li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-primary-container">check_circle</span> Priority API Access</li>
+</ul>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-bold rounded-lg glow-hover transition-all">
+              INITIALIZE_DEPLOYMENT
+            </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-[#131314] mt-20 py-12 px-8 flex flex-col items-center justify-center gap-6 border-t-0 font-['Fira_Code'] text-[10px] uppercase tracking-[0.2em]">
+<div class="flex gap-8">
+<a class="text-[#353436] hover:text-[#00FF9C] transition-all opacity-80 hover:opacity-100" href="#">Privacy_Protocol</a>
+<a class="text-[#353436] hover:text-[#00FF9C] transition-all opacity-80 hover:opacity-100" href="#">Terms_of_Service</a>
+<a class="text-[#353436] hover:text-[#00FF9C] transition-all opacity-80 hover:opacity-100" href="#">Security_Whitepaper</a>
+<a class="text-[#353436] hover:text-[#00FF9C] transition-all opacity-80 hover:opacity-100" href="#">API_Status</a>
+</div>
+<div class="text-[#00FF9C] font-bold text-lg tracking-widest bg-primary-container/10 px-4 py-2 border border-primary-container/20">
+      KINETIC_TERMINAL
+    </div>
+<p class="text-[#353436]">© 2024 KINETIC_TERMINAL // TEACHER_ASSISTANT_AGENT</p>
+</footer>
+</body></html>
