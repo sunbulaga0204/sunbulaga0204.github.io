@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=Fira+Code:wght@400;500&amp;family=Space+Grotesk:wght@300;500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -101,18 +100,19 @@
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container font-body overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="bg-[#131314] dark:bg-[#131314] flex justify-between items-center w-full px-6 py-4 max-w-[1440px] mx-auto docked full-width top-0 sticky z-50 bg-zinc-900/50 backdrop-blur-xl">
-<div class="font-mono text-xl font-bold tracking-tighter text-[#00FF9C]">
+<header class="bg-zinc-950/80 backdrop-blur-md flex justify-between items-center w-full px-6 py-4 max-w-full mx-auto docked full-width top-0 sticky z-50">
+<div class="font-mono text-xl font-black tracking-widest text-emerald-400">
             KINETIC_DEV
         </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-[#00FF9C] font-mono before:content-['&gt;'] before:mr-1 hover:text-[#00FF9C] hover:bg-zinc-800/50 transition-all duration-300" href="#arsenal">ARSENAL</a>
-<a class="text-zinc-500 font-mono hover:text-[#00FF9C] hover:bg-zinc-800/50 transition-all duration-300" href="#architectures">ARCHITECTURES</a>
-<a class="text-zinc-500 font-mono hover:text-[#00FF9C] hover:bg-zinc-800/50 transition-all duration-300" href="#approach">AI_APPROACH</a>
-<a class="text-zinc-500 font-mono hover:text-[#00FF9C] hover:bg-zinc-800/50 transition-all duration-300" href="#mailto:angzuhri@outlook.com">CONTACT</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors font-mono text-xs uppercase" href="#arsenal">Arsenal</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors font-mono text-xs uppercase" href="#services">Services</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors font-mono text-xs uppercase" href="#architectures">Architectures</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors font-mono text-xs uppercase" href="#approach">AI_Approach</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors font-mono text-xs uppercase" href="#contact">Contact</a>
 </nav>
-<button class="bg-primary-container text-on-primary-container px-4 py-2 font-mono text-sm font-bold active:scale-0.98 transition-transform shadow-[0_0_15px_rgba(0,255,156,0.2)]">
-            RESUME.PDF
+<button class="bg-primary-container text-on-primary-container px-4 py-2 font-mono text-sm font-bold active:scale-95 duration-100 opacity-90 transition-transform shadow-[0_0_15px_rgba(0,255,156,0.2)]">
+            CONNECT
         </button>
 </header>
 <main class="max-w-[1440px] mx-auto px-6">
@@ -131,7 +131,7 @@
                     I build stateful, autonomous AI systems that transcend basic chat interfaces. My work focuses on production-grade RAG pipelines, multi-agent orchestration, and ensuring data integrity in high-stakes technical environments.
                 </p>
 <div class="flex flex-wrap justify-center gap-4">
-<a class="bg-primary-container text-on-primary-container px-8 py-4 font-label font-bold rounded-lg hover:shadow-[0_0_25px_rgba(0,255,156,0.3)] transition-all" href="mailto:angzuhri@outlook.com">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 font-label font-bold rounded-lg hover:shadow-[0_0_25px_rgba(0,255,156,0.3)] transition-all" href="#contact">
                         &gt; EXECUTE_COLLABORATION
                     </a>
 <a class="border border-outline-variant text-on-surface px-8 py-4 font-label rounded-lg hover:bg-surface-container-highest transition-all" href="#architectures">
@@ -199,10 +199,54 @@
 </div>
 </div>
 </section>
+<!-- Section: SERVICES & PRODUCTS -->
+<section class="py-24 border-t border-outline-variant/10" id="services">
+<h2 class="text-4xl font-bold tracking-tight mb-16 flex items-center gap-4">
+<span class="text-primary-container font-label">02.</span> SERVICES &amp; PRODUCTS
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/10 hover:border-primary-container/30 transition-all group flex flex-col h-full">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-emerald-400">psychology_alt</span>
+</div>
+<h3 class="text-xl font-bold mb-4">AI Integration Consultation</h3>
+<p class="text-on-surface-variant text-sm mb-8 flex-1 leading-relaxed">Get custom architecture documentation tailored to your specific infrastructure and business needs.</p>
+<div class="mt-auto">
+<p class="font-label text-primary-container text-xs mb-4">Quote starts from $150 USD</p>
+<a class="inline-block w-full py-3 bg-zinc-800 text-on-surface text-center font-label text-xs uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all" href="#contact">INQUIRE_NOW</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/10 hover:border-primary-container/30 transition-all group flex flex-col h-full">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-emerald-400">school</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Teacher Assistant (LMaiS)</h3>
+<p class="text-on-surface-variant text-sm mb-8 flex-1 leading-relaxed">State-of-the-art AI assistant specifically optimized for higher education environments and research support.</p>
+<div class="mt-auto">
+<p class="font-label text-primary-container text-xs mb-4">Starting from $10.99 USD / 190,000 IDR / Month</p>
+<a class="inline-block w-full py-3 bg-zinc-800 text-on-surface text-center font-label text-xs uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all" href="#">SUBSCRIBE_NOW</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="p-8 bg-surface-container-low border border-outline-variant/10 hover:border-primary-container/30 transition-all group flex flex-col h-full">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-emerald-400">edit_note</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Essay Evaluation API</h3>
+<p class="text-on-surface-variant text-sm mb-8 flex-1 leading-relaxed">Automated scoring and semantic feedback for academic writing via a high-performance RESTful interface.</p>
+<div class="mt-auto">
+<p class="font-label text-zinc-500 text-xs mb-4 italic">Coming Soon - TBA</p>
+<div class="inline-block w-full py-3 bg-zinc-900 text-zinc-600 text-center font-label text-xs uppercase tracking-widest cursor-not-allowed">LOCKED</div>
+</div>
+</div>
+</div>
+</section>
 <!-- Section 3: FEATURED ARCHITECTURES -->
 <section class="py-24" id="architectures">
 <h2 class="text-4xl font-bold tracking-tight mb-16 flex items-center gap-4">
-<span class="text-primary-container font-label">02.</span> FEATURED ARCHITECTURES
+<span class="text-primary-container font-label">03.</span> FEATURED ARCHITECTURES
             </h2>
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 <!-- Project 1 -->
@@ -221,8 +265,8 @@
 <span class="bg-surface-container-highest px-3 py-1 font-label text-[10px] border border-outline-variant/20">MULTI_MODAL</span>
 <span class="bg-surface-container-highest px-3 py-1 font-label text-[10px] border border-outline-variant/20">STATEFUL_WORKFLOWS</span>
 </div>
-<a class="font-label text-primary-container text-xs hover:underline flex items-center gap-2 mt-auto" href="teacher-assistant-agent.html">
-    [ VIEW_PROJECT_PAGE ] <span class="material-symbols-outlined text-sm">arrow_outward</span>
+<a class="font-label text-primary-container text-xs hover:underline flex items-center gap-2 mt-auto" href="#">
+                                [ VIEW_ARCHITECTURE_SCHEMATIC ] <span class="material-symbols-outlined text-sm">arrow_outward</span>
 </a>
 </div>
 </div>
@@ -276,7 +320,7 @@
 <!-- Section 4: MY APPROACH TO AI -->
 <section class="py-24 border-t border-outline-variant/10" id="approach">
 <h2 class="text-4xl font-bold tracking-tight mb-16 flex items-center gap-4">
-<span class="text-primary-container font-label">03.</span> AI_METHODOLOGY
+<span class="text-primary-container font-label">04.</span> AI_METHODOLOGY
             </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20">
 <div class="p-12 bg-background hover:bg-surface-container-lowest transition-all">
@@ -307,25 +351,43 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-[#0e0e0f] dark:bg-[#0e0e0f] full-width py-12 mt-20 flex flex-col md:flex-row justify-between items-center px-8 border-t border-zinc-800/20">
-<div class="flex flex-col gap-2 mb-8 md:mb-0">
-<div class="text-[#00FF9C] font-bold font-mono text-[10px] tracking-widest uppercase">
-                CURRENT STATUS: WRAPPING UP PH.D. DEFENSE
+<footer class="bg-zinc-950 full-width py-12 mt-20 flex flex-col md:flex-row justify-between items-start gap-8 px-6 border-t border-zinc-800/50">
+<div class="flex flex-col gap-4">
+<div class="text-emerald-400 font-mono text-xs uppercase tracking-widest">
+                © 2024 KINETIC_DEV TERMINAL. ALL RIGHTS RESERVED.
             </div>
-<div class="text-zinc-600 font-mono text-[10px] tracking-widest uppercase">
-                © 2024 KINETIC_TERMINAL // STABLE_BUILD_V2.0
-            </div>
+<div class="flex flex-col gap-2 font-body text-sm text-zinc-400">
+<span class="hover:text-emerald-400 transition-colors cursor-pointer hover:underline decoration-emerald-400/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">location_on</span> 101 NULL ST, SF, CA
+                    </span>
+<span class="hover:text-emerald-400 transition-colors cursor-pointer hover:underline decoration-emerald-400/30 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs">call</span> +1 (555) 000-0101
+                    </span>
 </div>
-<div class="flex gap-8">
-<a class="text-zinc-600 hover:text-[#00FF9C] transition-colors font-mono text-[10px] tracking-widest uppercase hover:underline decoration-2" href="https://github.com/sunbulaga0204/sunbulaga0204.github.io">GITHUB</a>
-<a class="text-zinc-600 hover:text-[#00FF9C] transition-colors font-mono text-[10px] tracking-widest uppercase" href="#">LINKEDIN</a>
-<a class="text-zinc-600 hover:text-[#00FF9C] transition-colors font-mono text-[10px] tracking-widest uppercase" href="#">TWITTER</a>
-<a class="text-zinc-600 hover:text-[#00FF9C] transition-colors font-mono text-[10px] tracking-widest uppercase" href="mailto:angzuhri@outlook.com">EMAIL</a>
 </div>
-<div class="mt-8 md:mt-0 flex gap-4">
-<span class="material-symbols-outlined text-primary-container/40 text-lg">terminal</span>
-<span class="material-symbols-outlined text-primary-container/40 text-lg">memory</span>
-<span class="material-symbols-outlined text-primary-container/40 text-lg">code</span>
+<div class="flex flex-wrap gap-x-12 gap-y-4">
+<div class="flex flex-col gap-3">
+<div class="font-label text-[10px] text-zinc-600 uppercase tracking-widest">Navigation</div>
+<a class="text-zinc-500 hover:text-emerald-400 transition-colors text-sm font-mono uppercase" href="#arsenal">Arsenal</a>
+<a class="text-zinc-500 hover:text-emerald-400 transition-colors text-sm font-mono uppercase" href="#services">Services</a>
+<a class="text-zinc-500 hover:text-emerald-400 transition-colors text-sm font-mono uppercase" href="#architectures">Architectures</a>
+</div>
+<div class="flex flex-col gap-3">
+<div class="font-label text-[10px] text-zinc-600 uppercase tracking-widest">Connect</div>
+<a class="text-zinc-500 hover:text-emerald-400 transition-colors text-sm font-mono uppercase" href="#">Github</a>
+<a class="text-zinc-500 hover:text-emerald-400 transition-colors text-sm font-mono uppercase" href="#">LinkedIn</a>
+<a class="text-zinc-500 hover:text-emerald-400 transition-colors text-sm font-mono uppercase" href="#">Twitter</a>
+</div>
+<div class="flex flex-col gap-3">
+<div class="font-label text-[10px] text-zinc-600 uppercase tracking-widest">Resources</div>
+<a class="text-zinc-500 hover:text-emerald-400 transition-colors text-sm font-mono uppercase" href="#">Docs</a>
+<a class="text-zinc-500 hover:text-emerald-400 transition-colors text-sm font-mono uppercase" href="#">Privacy</a>
+</div>
+</div>
+<div class="flex gap-4 self-end md:self-auto">
+<span class="material-symbols-outlined text-primary-container/20 text-xl">terminal</span>
+<span class="material-symbols-outlined text-primary-container/20 text-xl">memory</span>
+<span class="material-symbols-outlined text-primary-container/20 text-xl">code</span>
 </div>
 </footer>
 </body></html>
