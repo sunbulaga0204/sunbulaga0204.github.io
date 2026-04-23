@@ -94,7 +94,7 @@
 <div class="hidden md:flex gap-8 items-center">
 <a class="text-xs font-mono text-emerald-400 border-b-2 border-emerald-400 pb-1" href="#">Services</a>
 <a class="text-xs font-mono text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Pricing</a>
-<a class="text-xs font-mono text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Contact</a>
+<a class="text-xs font-mono text-zinc-400 hover:text-zinc-100 transition-colors" href="mailto:angzuhri@gmail.com">Contact</a>
 </div>
 <button class="bg-primary-container text-on-primary-container px-4 py-2 font-mono text-xs font-bold rounded-lg hover:bg-zinc-900/50 hover:text-emerald-300 transition-all active:scale-95">
             Connect
@@ -256,7 +256,7 @@
 <span class="text-primary-container">$10.99</span>
 </div>
 </div>
-<button class="w-full bg-primary-container text-on-primary-container py-5 font-black text-sm tracking-[0.2em] hover:bg-primary-fixed-dim transition-all glow-hover" type="submit">
+<!-- // API call to initiate Xendit payment session will be performed here --><button class="w-full bg-primary-container text-on-primary-container py-5 font-black text-sm tracking-[0.2em] hover:bg-primary-fixed-dim transition-all glow-hover" onclick="window.location.href='https://checkout.xendit.co/v2/mock-payment'" type="button">
                         EXECUTE_PAYMENT
                     </button>
 <p class="text-[10px] font-mono text-center text-outline uppercase tracking-tighter opacity-50">
